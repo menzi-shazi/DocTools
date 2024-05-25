@@ -32,5 +32,27 @@ export function HeaderMegaMenu() {
           <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm"/>
         </Group>
       </header>
+      <Drawer opened={drawerOpened} onClose={closeDrawer} size="100%" padding="md" title="Navigation" hiddenFrom="sm" zIndex={1000000}>
+        <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
+          <Divider my="sm" />
+
+          <a href="#" className={classes.link}>
+            Scan
+          </a>
+          <a href="#" className={classes.link}>
+            Convert
+          </a>
+          <a href="#" className={classes.link}>
+            Merge
+          </a>
+
+          <Divider my="sm" />
+
+          <Group justify="center" grow pb="xl" px="md">
+            <Button variant="default">Log in</Button>
+            <Button>Sign up</Button>
+          </Group>
+        </ScrollArea>
+      </Drawer>
     </Box>);
 }

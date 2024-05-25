@@ -26,6 +26,10 @@ export function Camera() {
     doc.save('scanned.pdf');
   };
 
+  const videoConstraints = {
+    facingMode: 'environment',
+  };
+
   return (
     <Container size="sm" style={{ marginTop: '20px' }}>
       <Card shadow="sm" padding="lg">
@@ -35,6 +39,7 @@ export function Camera() {
               audio={false}
               ref={webcamRef}
               screenshotFormat="image/jpeg"
+              videoConstraints={videoConstraints}
               style={{ width: '100%' }}
             />
           </AspectRatio>
