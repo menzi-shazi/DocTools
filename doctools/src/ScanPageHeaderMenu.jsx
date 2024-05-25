@@ -7,8 +7,8 @@ export function HeaderMegaMenu() {
     const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
     const theme = useMantineTheme();
 
-    return (<Box pb={120}>
-      <header className={classes.header}>
+    return (<Box >
+      <header className={classes.header} >
         <Group justify="space-between" h="100%">
           DocTools
 

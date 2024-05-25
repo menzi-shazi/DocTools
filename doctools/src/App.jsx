@@ -1,12 +1,14 @@
-// Import styles of packages that you've installed.
-// All packages except `@mantine/hooks` require styles imports
 import '@mantine/core/styles.css';
 import { HeaderMegaMenu } from './ScanPageHeaderMenu';
+import { Camera } from './Camera';
+import { FooterCentered } from './Footer';
 
 import { MantineProvider } from '@mantine/core';
 
 export default function App() {
   return <MantineProvider>
-  <HeaderMegaMenu />
+    <HeaderMegaMenu />
+    <Camera />
+    <FooterCentered />
   </MantineProvider>;
 }
